@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@portfolio-pulse-monorepo/blog-utils": [
+        "libs/blog/blog-utils/src/index.ts"
+      ],
+      "@portfolio-pulse-monorepo/data-access": [
+        "libs/blog/data-access/src/index.ts"
+      ],
+      "@portfolio-pulse-monorepo/feature": ["libs/blog/feature/src/index.ts"],
+      "@portfolio-pulse-monorepo/models": ["libs/shared/models/src/index.ts"],
+      "@portfolio-pulse-monorepo/shared-utils": [
+        "libs/shared/shared-utils/src/index.ts"
+      ],
+      "@portfolio-pulse-monorepo/ui": ["libs/shared/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
