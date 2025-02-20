@@ -1,11 +1,20 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './core/components/login/login.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { AuthGuard } from './core/guards/auth.guard';
+import { AuthGuard } from '@portfolio-pulse/admin-domain';
+import { FeatureLoginComponent } from '@portfolio-pulse/feature-login';
+
 
 export const routes: Routes = [
-    { path: 'login', component: LoginComponent },
-    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: '**', redirectTo: '/dashboard' },
+    { path: 'login', component: FeatureLoginComponent },
+    {
+      path: '',
+      canActivate: [AuthGuard],
+      children: [
+        {
+          path: 'dashboard', 
+          loadComponent: () => import('@portfolio-pulse/feature-dashboard').then(m => m.FeatureDashboardComponent) },
+        { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+        { path: '**', redirectTo: '/dashboard' },
+
+      ]
+    }
   ];

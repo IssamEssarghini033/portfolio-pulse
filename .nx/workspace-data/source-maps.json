@@ -1513,192 +1513,76 @@
       "nx/target-defaults"
     ]
   },
-  "libs/blog/blog-utils": {
+  "libs/admin/domain": {
     "root": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
     "targets": [
-      "libs/blog/blog-utils/eslint.config.mjs",
+      "libs/admin/domain/eslint.config.mjs",
       "@nx/eslint/plugin"
-    ],
-    "targets.lint": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.cache": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.inputs": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.outputs": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.executor": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.cwd": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.options.command": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.technologies.0": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.description": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.command": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "targets.lint.metadata.help.example": [
-      "libs/blog/blog-utils/eslint.config.mjs",
-      "@nx/eslint/plugin"
-    ],
-    "sourceRoot": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
     ],
     "name": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
-    "tags": [
-      "libs/blog/blog-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.npm:private": [
-      "libs/blog/blog-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups": [
-      "libs/blog/blog-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js": [
-      "libs/blog/blog-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageName": [
-      "libs/blog/blog-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageMain": [
-      "libs/blog/blog-utils/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.isInPackageManagerWorkspaces": [
-      "libs/blog/blog-utils/package.json",
-      "nx/core/package-json"
-    ],
     "$schema": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/admin/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
     "projectType": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
-    "targets.build": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.executor": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.outputs": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.outputPath": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.main": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.tsConfig": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.assets": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.format": [
-      "libs/blog/blog-utils/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.generatePackageJson": [
-      "libs/blog/blog-utils/project.json",
+    "tags": [
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
     "targets.test": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
     "targets.test.executor": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
     "targets.test.outputs": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
     "targets.test.options": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
     "targets.test.options.jestConfig": [
-      "libs/blog/blog-utils/project.json",
+      "libs/admin/domain/project.json",
       "nx/core/project-json"
     ],
-    "targets.build.cache": [
+    "targets.lint": [
+      "libs/admin/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "libs/admin/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.cache": [
       "nx.json",
       "nx/target-defaults"
     ],
-    "targets.build.dependsOn": [
+    "targets.lint.inputs": [
       "nx.json",
       "nx/target-defaults"
     ],
-    "targets.build.inputs": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.parallelism": [
+    "targets.lint.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ],
@@ -1731,145 +1615,65 @@
       "nx/target-defaults"
     ]
   },
-  "libs/blog/data-access": {
+  "libs/admin/feature-dashboard": {
     "root": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets": [
-      "libs/blog/data-access/eslint.config.mjs",
+      "libs/admin/feature-dashboard/eslint.config.mjs",
       "@nx/eslint/plugin"
     ],
-    "sourceRoot": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
     "name": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
-    ],
-    "tags": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.npm:public": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageName": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.isInPackageManagerWorkspaces": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.executor": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.dependsOn": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.options": [
-      "libs/blog/data-access/package.json",
-      "nx/core/package-json"
     ],
     "$schema": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "prefix": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "projectType": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
-    "targets.build": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.executor": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.outputs": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.defaultConfiguration": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.project": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production.tsConfig": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development": [
-      "libs/blog/data-access/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development.tsConfig": [
-      "libs/blog/data-access/project.json",
+    "tags": [
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets.test": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets.test.executor": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets.test.outputs": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets.test.options": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets.test.options.jestConfig": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets.lint": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets.lint.executor": [
-      "libs/blog/data-access/project.json",
+      "libs/admin/feature-dashboard/project.json",
       "nx/core/project-json"
     ],
     "targets.lint.cache": [
@@ -1881,22 +1685,6 @@
       "nx/target-defaults"
     ],
     "targets.lint.parallelism": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.cache": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.dependsOn": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.inputs": [
-      "nx.json",
-      "nx/target-defaults"
-    ],
-    "targets.build.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ],
@@ -1929,145 +1717,65 @@
       "nx/target-defaults"
     ]
   },
-  "libs/blog/feature": {
+  "libs/admin/feature-login": {
     "root": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets": [
-      "libs/blog/feature/eslint.config.mjs",
+      "libs/admin/feature-login/eslint.config.mjs",
       "@nx/eslint/plugin"
     ],
-    "sourceRoot": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
     "name": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
-    ],
-    "tags": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "tags.npm:public": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.targetGroups": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.packageName": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "metadata.js.isInPackageManagerWorkspaces": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.executor": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.dependsOn": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
-    ],
-    "targets.nx-release-publish.options": [
-      "libs/blog/feature/package.json",
-      "nx/core/package-json"
     ],
     "$schema": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "prefix": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "projectType": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
-    "targets.build": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.executor": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.outputs": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.defaultConfiguration": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.options.project": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.production.tsConfig": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development": [
-      "libs/blog/feature/project.json",
-      "nx/core/project-json"
-    ],
-    "targets.build.configurations.development.tsConfig": [
-      "libs/blog/feature/project.json",
+    "tags": [
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets.test": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets.test.executor": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets.test.outputs": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets.test.options": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets.test.options.jestConfig": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets.lint": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets.lint.executor": [
-      "libs/blog/feature/project.json",
+      "libs/admin/feature-login/project.json",
       "nx/core/project-json"
     ],
     "targets.lint.cache": [
@@ -2082,19 +1790,105 @@
       "nx.json",
       "nx/target-defaults"
     ],
-    "targets.build.cache": [
+    "targets.test.cache": [
       "nx.json",
       "nx/target-defaults"
     ],
-    "targets.build.dependsOn": [
+    "targets.test.inputs": [
       "nx.json",
       "nx/target-defaults"
     ],
-    "targets.build.inputs": [
+    "targets.test.options.passWithNoTests": [
       "nx.json",
       "nx/target-defaults"
     ],
-    "targets.build.parallelism": [
+    "targets.test.configurations.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.codeCoverage": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "libs/client/domain": {
+    "root": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/client/domain/eslint.config.mjs",
+      "@nx/eslint/plugin"
+    ],
+    "name": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "libs/client/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ],
@@ -2763,16 +2557,16 @@
   },
   ".": {
     "root": [
-      "package.json",
-      "nx/core/package-json"
+      "project.json",
+      "nx/core/project-json"
     ],
     "sourceRoot": [
       "package.json",
       "nx/core/package-json"
     ],
     "name": [
-      "package.json",
-      "nx/core/package-json"
+      "project.json",
+      "nx/core/project-json"
     ],
     "tags": [
       "package.json",
@@ -2801,6 +2595,10 @@
     "targets": [
       "package.json",
       "nx/core/package-json"
+    ],
+    "$schema": [
+      "project.json",
+      "nx/core/project-json"
     ]
   }
 }

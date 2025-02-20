@@ -99,8 +99,6 @@
   "projects": {
     "admin": "apps/admin",
     "api": "apps/api",
-    "shared-ui": "libs/shared/ui",
-    "shared-utils": "libs/shared/utils",
-    "blog-utils": "libs/blog/utils"
+    "client": "apps/client"
   }
 }

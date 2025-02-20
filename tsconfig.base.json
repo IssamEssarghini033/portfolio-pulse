@@ -15,18 +15,21 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@portfolio-pulse-monorepo/blog-utils": [
-        "libs/blog/blog-utils/src/index.ts"
+      "@portfolio-pulse/admin-domain": [
+        "libs/admin/domain/src/index.ts"
       ],
-      "@portfolio-pulse-monorepo/data-access": [
-        "libs/blog/data-access/src/index.ts"
+      "@portfolio-pulse/client-domain": ["libs/client/domain/src/index.ts"],
+      "@portfolio-pulse/feature-dashboard": [
+        "libs/admin/feature-dashboard/src/index.ts"
       ],
-      "@portfolio-pulse-monorepo/feature": ["libs/blog/feature/src/index.ts"],
-      "@portfolio-pulse-monorepo/models": ["libs/shared/models/src/index.ts"],
-      "@portfolio-pulse-monorepo/shared-utils": [
+      "@portfolio-pulse/feature-login": [
+        "libs/admin/feature-login/src/index.ts"
+      ],
+      "@portfolio-pulse/models": ["libs/shared/models/src/index.ts"],
+      "@portfolio-pulse/shared-utils": [
         "libs/shared/shared-utils/src/index.ts"
       ],
-      "@portfolio-pulse-monorepo/ui": ["libs/shared/ui/src/index.ts"]
+      "@portfolio-pulse/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

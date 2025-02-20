@@ -1,0 +1,4 @@
+{
+  "name": "@portfolio-pulse-monorepo/source",
+  "$schema": "node_modules/nx/schemas/project-schema.json"
+}

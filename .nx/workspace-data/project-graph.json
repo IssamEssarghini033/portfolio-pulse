@@ -1,5 +1,109 @@
 {
   "nodes": {
+    "feature-dashboard": {
+      "name": "feature-dashboard",
+      "type": "lib",
+      "data": {
+        "root": "libs/admin/feature-dashboard",
+        "targets": {
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {},
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.mjs"
+            ]
+          },
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/admin/feature-dashboard/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            },
+            "parallelism": true,
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ]
+          }
+        },
+        "name": "feature-dashboard",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/admin/feature-dashboard/src",
+        "prefix": "lib",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
+    "feature-login": {
+      "name": "feature-login",
+      "type": "lib",
+      "data": {
+        "root": "libs/admin/feature-login",
+        "targets": {
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {},
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.mjs"
+            ]
+          },
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/admin/feature-login/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            },
+            "parallelism": true,
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ]
+          }
+        },
+        "name": "feature-login",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/admin/feature-login/src",
+        "prefix": "lib",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
     "shared-utils": {
       "name": "shared-utils",
       "type": "lib",
@@ -115,11 +219,11 @@
         "implicitDependencies": []
       }
     },
-    "data-access": {
-      "name": "data-access",
+    "client-domain": {
+      "name": "client-domain",
       "type": "lib",
       "data": {
-        "root": "libs/blog/data-access",
+        "root": "libs/client/domain",
         "targets": {
           "lint": {
             "executor": "@nx/eslint:lint",
@@ -134,49 +238,13 @@
               "{workspaceRoot}/eslint.config.mjs"
             ]
           },
-          "nx-release-publish": {
-            "executor": "@nx/js:release-publish",
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
-            "options": {},
-            "configurations": {},
-            "parallelism": true
-          },
-          "build": {
-            "executor": "@nx/angular:ng-packagr-lite",
-            "outputs": [
-              "{workspaceRoot}/dist/{projectRoot}"
-            ],
-            "options": {
-              "project": "libs/blog/data-access/ng-package.json"
-            },
-            "configurations": {
-              "production": {
-                "tsConfig": "libs/blog/data-access/tsconfig.lib.prod.json"
-              },
-              "development": {
-                "tsConfig": "libs/blog/data-access/tsconfig.lib.json"
-              }
-            },
-            "defaultConfiguration": "production",
-            "parallelism": true,
-            "cache": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ]
-          },
           "test": {
             "executor": "@nx/jest:jest",
             "outputs": [
               "{workspaceRoot}/coverage/{projectRoot}"
             ],
             "options": {
-              "jestConfig": "libs/blog/data-access/jest.config.ts",
+              "jestConfig": "libs/client/domain/jest.config.ts",
               "passWithNoTests": true
             },
             "configurations": {
@@ -194,136 +262,12 @@
             ]
           }
         },
-        "sourceRoot": "libs/blog/data-access/src",
-        "name": "data-access",
-        "tags": [
-          "npm:public"
-        ],
-        "metadata": {
-          "targetGroups": {},
-          "js": {
-            "packageName": "@portfolio-pulse-monorepo/data-access",
-            "isInPackageManagerWorkspaces": false
-          }
-        },
+        "name": "client-domain",
         "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/client/domain/src",
         "prefix": "lib",
         "projectType": "library",
-        "implicitDependencies": []
-      }
-    },
-    "blog-utils": {
-      "name": "blog-utils",
-      "type": "lib",
-      "data": {
-        "root": "libs/blog/blog-utils",
-        "targets": {
-          "lint": {
-            "cache": true,
-            "options": {
-              "cwd": "libs/blog/blog-utils",
-              "command": "eslint ."
-            },
-            "inputs": [
-              "default",
-              "^default",
-              "{workspaceRoot}/eslint.config.mjs",
-              "{projectRoot}/eslint.config.mjs",
-              "{workspaceRoot}/tools/eslint-rules/**/*",
-              {
-                "externalDependencies": [
-                  "eslint"
-                ]
-              }
-            ],
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "metadata": {
-              "technologies": [
-                "eslint"
-              ],
-              "description": "Runs ESLint on project",
-              "help": {
-                "command": "npx eslint --help",
-                "example": {
-                  "options": {
-                    "max-warnings": 0
-                  }
-                }
-              }
-            },
-            "executor": "nx:run-commands",
-            "configurations": {},
-            "parallelism": true
-          },
-          "build": {
-            "executor": "@nx/esbuild:esbuild",
-            "outputs": [
-              "{options.outputPath}"
-            ],
-            "options": {
-              "outputPath": "dist/libs/blog/blog-utils",
-              "main": "libs/blog/blog-utils/src/index.ts",
-              "tsConfig": "libs/blog/blog-utils/tsconfig.lib.json",
-              "assets": [
-                "libs/blog/blog-utils/*.md"
-              ],
-              "format": [
-                "cjs"
-              ],
-              "generatePackageJson": true
-            },
-            "configurations": {},
-            "parallelism": true,
-            "cache": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ]
-          },
-          "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "jestConfig": "libs/blog/blog-utils/jest.config.ts",
-              "passWithNoTests": true
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            },
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          }
-        },
-        "sourceRoot": "libs/blog/blog-utils/src",
-        "name": "blog-utils",
-        "tags": [
-          "npm:private"
-        ],
-        "metadata": {
-          "targetGroups": {},
-          "js": {
-            "packageName": "@portfolio-pulse-monorepo/blog-utils",
-            "packageMain": "./index.cjs",
-            "isInPackageManagerWorkspaces": false
-          }
-        },
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -442,11 +386,11 @@
         "implicitDependencies": []
       }
     },
-    "feature": {
-      "name": "feature",
+    "admin-domain": {
+      "name": "admin-domain",
       "type": "lib",
       "data": {
-        "root": "libs/blog/feature",
+        "root": "libs/admin/domain",
         "targets": {
           "lint": {
             "executor": "@nx/eslint:lint",
@@ -461,49 +405,13 @@
               "{workspaceRoot}/eslint.config.mjs"
             ]
           },
-          "nx-release-publish": {
-            "executor": "@nx/js:release-publish",
-            "dependsOn": [
-              "^nx-release-publish"
-            ],
-            "options": {},
-            "configurations": {},
-            "parallelism": true
-          },
-          "build": {
-            "executor": "@nx/angular:ng-packagr-lite",
-            "outputs": [
-              "{workspaceRoot}/dist/{projectRoot}"
-            ],
-            "options": {
-              "project": "libs/blog/feature/ng-package.json"
-            },
-            "configurations": {
-              "production": {
-                "tsConfig": "libs/blog/feature/tsconfig.lib.prod.json"
-              },
-              "development": {
-                "tsConfig": "libs/blog/feature/tsconfig.lib.json"
-              }
-            },
-            "defaultConfiguration": "production",
-            "parallelism": true,
-            "cache": true,
-            "dependsOn": [
-              "^build"
-            ],
-            "inputs": [
-              "production",
-              "^production"
-            ]
-          },
           "test": {
             "executor": "@nx/jest:jest",
             "outputs": [
               "{workspaceRoot}/coverage/{projectRoot}"
             ],
             "options": {
-              "jestConfig": "libs/blog/feature/jest.config.ts",
+              "jestConfig": "libs/admin/domain/jest.config.ts",
               "passWithNoTests": true
             },
             "configurations": {
@@ -521,21 +429,12 @@
             ]
           }
         },
-        "sourceRoot": "libs/blog/feature/src",
-        "name": "feature",
-        "tags": [
-          "npm:public"
-        ],
-        "metadata": {
-          "targetGroups": {},
-          "js": {
-            "packageName": "@portfolio-pulse-monorepo/feature",
-            "isInPackageManagerWorkspaces": false
-          }
-        },
+        "name": "admin-domain",
         "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/admin/domain/src",
         "prefix": "lib",
         "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -1508,6 +1407,7 @@
           }
         },
         "targets": {},
+        "$schema": "node_modules/nx/schemas/project-schema.json",
         "implicitDependencies": []
       }
     }
@@ -16563,6 +16463,75 @@
     }
   },
   "dependencies": {
+    "feature-dashboard": [
+      {
+        "source": "feature-dashboard",
+        "target": "npm:@nx/eslint-plugin",
+        "type": "static"
+      },
+      {
+        "source": "feature-dashboard",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "feature-dashboard",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "feature-dashboard",
+        "target": "admin-domain",
+        "type": "static"
+      },
+      {
+        "source": "feature-dashboard",
+        "target": "npm:jest-preset-angular",
+        "type": "static"
+      }
+    ],
+    "feature-login": [
+      {
+        "source": "feature-login",
+        "target": "npm:@nx/eslint-plugin",
+        "type": "static"
+      },
+      {
+        "source": "feature-login",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "feature-login",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "feature-login",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "feature-login",
+        "target": "npm:@angular/router",
+        "type": "static"
+      },
+      {
+        "source": "feature-login",
+        "target": "npm:@angular/material",
+        "type": "static"
+      },
+      {
+        "source": "feature-login",
+        "target": "admin-domain",
+        "type": "static"
+      },
+      {
+        "source": "feature-login",
+        "target": "npm:jest-preset-angular",
+        "type": "static"
+      }
+    ],
     "shared-utils": [
       {
         "source": "shared-utils",
@@ -16570,38 +16539,26 @@
         "type": "dynamic"
       }
     ],
-    "data-access": [
+    "client-domain": [
       {
-        "source": "data-access",
+        "source": "client-domain",
         "target": "npm:@nx/eslint-plugin",
         "type": "static"
       },
       {
-        "source": "data-access",
-        "target": "npm:jsonc-eslint-parser",
-        "type": "dynamic"
-      },
-      {
-        "source": "data-access",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "data-access",
+        "source": "client-domain",
         "target": "npm:@angular/core",
         "type": "static"
       },
       {
-        "source": "data-access",
+        "source": "client-domain",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "client-domain",
         "target": "npm:jest-preset-angular",
         "type": "static"
-      }
-    ],
-    "blog-utils": [
-      {
-        "source": "blog-utils",
-        "target": "npm:jsonc-eslint-parser",
-        "type": "dynamic"
       }
     ],
     "models": [
@@ -16611,29 +16568,49 @@
         "type": "dynamic"
       }
     ],
-    "feature": [
+    "admin-domain": [
       {
-        "source": "feature",
+        "source": "admin-domain",
         "target": "npm:@nx/eslint-plugin",
         "type": "static"
       },
       {
-        "source": "feature",
-        "target": "npm:jsonc-eslint-parser",
-        "type": "dynamic"
-      },
-      {
-        "source": "feature",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "feature",
+        "source": "admin-domain",
         "target": "npm:@angular/core",
         "type": "static"
       },
       {
-        "source": "feature",
+        "source": "admin-domain",
+        "target": "npm:@angular/router",
+        "type": "static"
+      },
+      {
+        "source": "admin-domain",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "admin-domain",
+        "target": "npm:@auth0/angular-jwt",
+        "type": "static"
+      },
+      {
+        "source": "admin-domain",
+        "target": "npm:@ngrx/store",
+        "type": "static"
+      },
+      {
+        "source": "admin-domain",
+        "target": "npm:@ngrx/effects",
+        "type": "static"
+      },
+      {
+        "source": "admin-domain",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "admin-domain",
         "target": "npm:jest-preset-angular",
         "type": "static"
       }
@@ -16794,28 +16771,18 @@
       },
       {
         "source": "admin",
-        "target": "npm:@auth0/angular-jwt",
+        "target": "admin-domain",
         "type": "static"
       },
       {
         "source": "admin",
-        "target": "npm:@angular/forms",
+        "target": "feature-login",
         "type": "static"
       },
       {
         "source": "admin",
-        "target": "npm:@ngrx/store",
-        "type": "static"
-      },
-      {
-        "source": "admin",
-        "target": "npm:@ngrx/effects",
-        "type": "static"
-      },
-      {
-        "source": "admin",
-        "target": "npm:rxjs",
-        "type": "static"
+        "target": "feature-dashboard",
+        "type": "dynamic"
       },
       {
         "source": "admin",
@@ -38394,5 +38361,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1739981577234
+  "computedAt": 1740054727611
 }
